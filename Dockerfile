@@ -1,2 +1,5 @@
 FROM ubuntu
-ENTRYPOINT /bin/echo 'Hello'
+RUN mkdir /opt/maven-3.3.9
+COPY apache-maven-3.3.9 /opt/maven-3.3.9
+ENTRYPOINT /opt/maven-3.3.9/bin/mvn --version
+
